@@ -103,5 +103,5 @@ while(!treasureFound){
     treasureFound = true;
    }
 
-   //treasureFound = true;
+   treasureFound = true;
 };
