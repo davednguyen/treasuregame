@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+.blue { background-color: blue; }
+
+.red { background-color: red; }
+
+.orange { background-color: orange; }
+
+.green { background-color: green; }
+
+.pink { background-color: pink; }
+
+.purple { background-color: purple; }
+
+.yellow { background-color: yellow; }
+
+.aqua { background-color: aqua; }
+
+.flex-container div {
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.flex-container div p {
+  font-size: 2em;
+  color: white;
+}
+
+.flex-container {
+  border: 1px dashed black;
+  width: 90%;
+  margin: auto;
+}
+
+.flex-container-2 div {
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.flex-container-2 div p {
+  font-size: 2em;
+  color: white;
+}
+
+.flex-container-2 {
+  border: 1px dashed black;
+  width: 90%;
+  margin: auto;
+}
+
+.flex-container-3 div {
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.flex-container-3 div p {
+  font-size: 2em;
+  color: white;
+}
+
+.flex-container-3 {
+  border: 1px dashed black;
+  width: 90%;
+  margin: auto;
+}
