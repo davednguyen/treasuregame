@@ -18,6 +18,7 @@ var treasureFound = false;
 
 //get user 's name
 var name = prompt("welcome brave adventure ! what are you called?");
+document.getElementById("player").innerHTML = name;
 
 while(!treasureFound){
    var direction = prompt("what direciton would you like to go in? (north, south, east, west");
@@ -44,6 +45,7 @@ while(!treasureFound){
             //     console.log("you found the treasure");
             //     treasureFound = true;
             // }
+            document.getElementById("logColumn").innerHTML = "<th>" + "location x: " + userX + ", location y: " + userY + "</th>";
         }else{
             console.log("there is no location to move next")
         }
@@ -59,6 +61,7 @@ while(!treasureFound){
             //     console.log("you found the treasure");
             //     treasureFound = true;
             // }
+            
         }else{
             console.log("there is no location to move next")
         }
