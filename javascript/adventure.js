@@ -10,7 +10,7 @@ var userX = 0;
 var userY = 0;
 
 // hide the treasure location 
-var treasureX = 2;
+var treasureX = 1;
 var treasureY = 2;
 
 //flag that controls loop
@@ -39,13 +39,15 @@ while(!treasureFound){
         //neither value < 0, neither is > max
         // you can do combound conditional check
         if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+            var currentLocation = "from x: " +userX + "and from y: " + userY;
             userX = newX;
             userY = newY;
-            // if(userX == treasureX && userY == treasureY){
-            //     console.log("you found the treasure");
-            //     treasureFound = true;
-            // }
-            document.getElementById("logColumn").innerHTML = "<th>" + "location x: " + userX + ", location y: " + userY + "</th>";
+            document.createElement("h3").innerHTML = "location x: " + userX + ", location y: " + userY;
+            var info = currentLocation + " to location x: " + userX + ", location y: " + userY;
+            var findTableElement = document.getElementById("logColumn"); 
+            var createTH = document.createElement("th");           
+            findTableElement.appendChild(createTH).innerHTML = info;
+            console.log(info);
         }else{
             console.log("there is no location to move next")
         }
@@ -55,45 +57,47 @@ while(!treasureFound){
          // you can do combound conditional check
          if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY)
          {
+            var currentLocation = "from x: " +userX + "and from y: " + userY;
             userX = newX;
-            userY = newY;
-            // if(userX == treasureX && userY == treasureY){
-            //     console.log("you found the treasure");
-            //     treasureFound = true;
-            // }
-            
+            userY = newY;         
+            var info = currentLocation + " to location x: " + userX + ", location y: " + userY;
+            var findTableElement = document.getElementById("logColumn");            
+            findTableElement.appendChild("th").innerHTML = info;
+            console.log(info);
         }else{
             console.log("there is no location to move next")
         }
    }else if (direction == "south"){
+       
        newX = userX;
        newY = userY -1;
         // you can do combound conditional check
         if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY)
         {
+            var currentLocation = "from x: " +userX + "and from y: " + userY;
             userX = newX;
             userY = newY;
-            // if(userX == treasureX && userY == treasureY){
-            //     console.log("you found the treasure");
-            //     treasureFound = true;
-            // }
+            var info = currentLocation + " to location x: " + userX + ", location y: " + userY;
+            var findTableElement = document.getElementById("logColumn");            
+            findTableElement.appendChild("th").innerHTML = info;
+            console.log(info);
         }else{
             console.log("there is no location to move next")
         }
    }else if (direction == "west"){
+       
        newX = userX-1;
        newY = userY;
         // you can do combound conditional check
         if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY)
         {
+            var currentLocation = "from x: " +userX + "and from y: " + userY;
             userX = newX;
             userY = newY;
-            // if(userX == treasureX && userY == treasureY){
-            //     console.log("you found the treasure");
-            //     treasureFound = true;
-            // }else{
-
-            // }
+            var info = currentLocation + " to location x: " + userX + ", location y: " + userY;
+            var findTableElement = document.getElementById("logColumn");            
+            findTableElement.appendChild("th").innerHTML = info;
+            console.log(info);
         }else{
             console.log("there is no location to move next")
         }
@@ -105,6 +109,5 @@ while(!treasureFound){
     console.log("you found the treasure");
     treasureFound = true;
    }
-
-   treasureFound = true;
+   //treasureFound = true;
 };
