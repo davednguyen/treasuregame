@@ -60,8 +60,11 @@ while(!treasureFound && count <= 10){
             var info = currentLocation + " to location x: " + userX + ", location y: " + userY;            
             updateColor(userX,userY,"blue");
             console.log(info);
+            document.getElementById("gameNote").innerHTML = info;
         }else{
-            console.log("there is no location to move next");
+            var note = "there is no location to move next";
+            console.log(note);
+            document.getElementById("gameNote").innerHTML = note;
             updateLogTable(userX,userY,userX,userY);
         }
    }else if (direction == "east"){
@@ -78,7 +81,9 @@ while(!treasureFound && count <= 10){
             updateColor(userX,userY, "blue");
             console.log(info);
         }else{
-            console.log("there is no location to move next");
+            var note = "there is no location to move next";
+            console.log(note);
+            document.getElementById("gameNote").innerHTML = note;
             updateLogTable(userX,userY,userX,userY);
         }
    }else if (direction == "south"){
@@ -96,7 +101,9 @@ while(!treasureFound && count <= 10){
             updateColor(userX,userY, "blue");
             console.log(info);
         }else{
-            console.log("there is no location to move next");
+            var note = "there is no location to move next";
+            console.log(note);
+            document.getElementById("gameNote").innerHTML = note;
             updateLogTable(userX,userY,userX,userY);
         }
    }else if (direction == "west"){
@@ -114,11 +121,15 @@ while(!treasureFound && count <= 10){
             updateColor(userX,userY,"blue");
             console.log(info);
         }else{
-            console.log("there is no location to move next");
+            var note = "there is no location to move next";
+            console.log(note);
+            document.getElementById("gameNote").innerHTML = note;
             updateLogTable(userX,userY,userX,userY);
         }
    }else{
-       console.log("please enter a real drection");         
+        var info = "please enter a real drection";
+       console.log(info);
+       document.getElementById("gameNote").innerHTML = info;         
    }
 
      //update steps 
