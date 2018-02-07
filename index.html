@@ -9,29 +9,32 @@
     </head>
     <body>
         <div class="container">
-        <h1>Treasure Game</h1>
+        <h1 class="align-middle">Treasure Game</h1>
         <h2>Game map</h2>        
-        <table class="table table-bordered">
+        <table id="gameMapTable" class="table table-bordered">
             <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
+                <th class="gameMap" id="position00"></th>
+                <th class="gameMap" id="position01"></th>
+                <th class="gameMap" id="position02"></th>
             </tr>
             <tr>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
+                <th class="gameMap" id="position10"></th>
+                <th class="gameMap" id="position11"></th>
+                <th class="gameMap" id="position12"></th>
             </tr>
             <tr>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
+                <th class="gameMap" id="position20"></th>
+                <th class="gameMap" id="position21"></th>
+                <th class="gameMap" id="position22"></th>
             </tr>
         </table>
         <h2 id="player" class="playername"></h2>
-        <table class="logtable">
+        <h2 id="steps"></h2>
+        <h2 id="treasureLoc"></h2>
+        <h2 id="playerLoc"></h2>
+        <h2> Game logs</h2>
+        <table class="table table-bordered logtable">
             <tr id="logColumn">
-
             </tr>
         </table>
         </div>

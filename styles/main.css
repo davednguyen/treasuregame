@@ -1,0 +1,17 @@
+.gameMap{
+    color:white;
+    width: 1%;
+}
+
+h1{
+    text-align: center;
+}
+
+#gameMapTable{
+    background: yellow;
+}
+
+.logtable{
+    color:white;
+    background-color: darkslategrey;
+}
