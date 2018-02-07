@@ -1,4 +1,9 @@
 console.log("hello");    
+//clear info on the page for new game
+clearLocation("steps");
+clearLocation("player");
+clearLocation("playerLoc");
+clearLocation("treasureLoc");
 
 // start to write game steps
 // define the size of the game play area
@@ -155,4 +160,9 @@ function updateLogTable(fromX,fromY,toX,toY){
     var findTableElement = document.getElementById("logColumn");
     var createTH = document.createElement("th");              
     findTableElement.appendChild(createTH).innerHTML = info;
+}
+
+//clear location
+function clearLocation(elementId){
+    document.getElementById(elementId).innerHTML = "";
 }
