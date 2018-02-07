@@ -12,7 +12,7 @@ var randomPlayerY = Math.floor((Math.random()*2) + 0);
 var userX =randomPLayerX;
 var userY =randomPlayerY;
 //display player location
-document.getElementById("playerLoc").innerHTML = "Player location: ("+userX+","+userY+")";
+document.getElementById("playerLoc").innerHTML = "Player starting location: ("+userX+","+userY+")";
 
 // hide the treasure location
 //set random location for treasure  
@@ -20,8 +20,6 @@ var randomX = Math.floor((Math.random()*2) + 0);
 var randomY = Math.floor((Math.random()*2) + 0);
 var treasureX = randomX;
 var treasureY = randomY;
-//display treasure location
-document.getElementById("treasureLoc").innerHTML = "Treasure location: ("+treasureX+","+treasureY+")";
 
 //flag that controls loop
 var treasureFound = false;
@@ -126,6 +124,8 @@ while(!treasureFound && count <= 10){
    if(userX == treasureX && userY == treasureY){
     console.log("you found the treasure");
     treasureFound = true;
+    //display treasure location
+    document.getElementById("treasureLoc").innerHTML = "Treasure location: ("+treasureX+","+treasureY+")";
    }
    //update treasure location to the map
    upateText(treasureX,treasureY, "treasure location");
