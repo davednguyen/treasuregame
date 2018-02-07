@@ -29,12 +29,14 @@ var treasureY = randomY;
 //flag that controls loop
 var treasureFound = false;
 
+//play game process
 //get user 's name
 var name = prompt("welcome brave adventure ! what are you called?");
 document.getElementById("player").innerHTML = "player: " + name;
 // set number of times user can play
 var count = 0;
 
+//start the game
 while(!treasureFound && count <= 10){
    var direction = prompt("what direciton would you like to go in? (north, south, east, west");
    console.log(direction)
@@ -131,11 +133,22 @@ while(!treasureFound && count <= 10){
     treasureFound = true;
     //display treasure location
     document.getElementById("treasureLoc").innerHTML = "Treasure location: ("+treasureX+","+treasureY+")";
+    //update treasure location to the map
+    upateText(treasureX,treasureY, "treasure location");
+    document.getElementById("gameNote").innerHTML = "congrat!!... you have won the game..!!"; 
+    count = 0;
    }
-   //update treasure location to the map
-   upateText(treasureX,treasureY, "treasure location");
+   //update location of player on the man
    updateColor(treasureX,treasureY,"green");
 };
+
+    //end the game when user hit more than 10 times
+    if(count > 10){
+        document.getElementById("treasureLoc").innerHTML = "Treasure location: ("+treasureX+","+treasureY+")";
+        document.getElementById("gameNote").innerHTML = "game times already ended..please play again.."; 
+        upateText(treasureX,treasureY, "treasure location");
+        count = 0;
+    };
 
 //update color to HTML element
 function updateColor( x, y, color){

@@ -13,5 +13,9 @@ h1{
 
 .logtable{
     color:white;
-    background-color: darkslategrey;
+    background-color: blueviolet;
+}
+
+#gameNote{
+    color: red;
 }
